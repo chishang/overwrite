@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Overwrite - index demo</title>
+	<link rel="stylesheet" href="index.css"/>
+	<script src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy-min.js"></script>
+	<script>
+		if (KISSY.Config.debug) {
+			var srcPath = "./";
+			KISSY.config({
+				packages:[
+					{
+						name:"overwrite",
+						path:srcPath,
+						charset:"utf-8",
+						ignorePackageNameInUri:true,
+						debug:true
+					}
+				]
+			});
+		} else {
+			KISSY.config({
+				packages: [
+					{
+						name: 'overwrite',
+						// 发布到线上时需要带上版本号
+						path: 'http://a.tbcdn.cn/g/group-name/overwrite/x.y.z',
+						ignorePackageNameInUri: true
+					}
+				]
+			});
+		}
+	</script>
+</head>
+<body>
+
+	<!--Your Code Here-->
+	<!--#include virtual="./path/to/include/file.html" -->
+
+	<script>
+		KISSY.use('overwrite/index', function(S, Overwrite) {
+			Overwrite.init();
+		});	
+	</script>
+</body>
+</html>
