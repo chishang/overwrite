@@ -16,7 +16,6 @@ KISSY.add(function (S, Node,Base) {
         var self = this;
         //调用父类构造函数
         Overwrite.superclass.constructor.call(self, comConfig);
-        this
     }
     S.extend(Overwrite, Base, /** @lends Overwrite.prototype*/{
 		init:function(selector,config){
