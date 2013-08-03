@@ -1,0 +1,13 @@
+.overwrite{
+    position: relative;
+}
+.overwrite_input{
+    text-indent:-99999px;
+}
+.overwrite_tip{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    color:#ccc;
+}

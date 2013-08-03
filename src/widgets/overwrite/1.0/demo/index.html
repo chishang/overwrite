@@ -7,7 +7,9 @@
 </head>
 <body>
 <h2>overwrite的demo</h2>
-
+<form>
+    <input placeholder="YYYY-MM-DD" id="J_Calendar"/>
+</form>
 <script>
     var S = KISSY;
     S.Config.debug = true;
@@ -27,8 +29,9 @@
 
     S.use('gallery/overwrite/1.0/index', function (S, Overwrite) {
          var overwrite = new Overwrite({
-         	
+         	node: S.one('#J_Calendar')
          });
+        overwrite.init();
     })
 </script>
 </body>
