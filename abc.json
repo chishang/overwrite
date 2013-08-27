@@ -1,15 +1,14 @@
 {
     "name": "overwrite",
-    "desc": "description of your app",
-    "type": "clam",
-	"group":"flight",
-	"src":"true",
+    "version": "1.0",
+    "desc": "",
+    "cover": "",
+    "tag":"",
     "author": {
-        "name": "chishang",
-        "email": "chishang.lcw@gmail.com"
+        "name": "ued",
+        "email": "chishang.lcw@gmail.com",
+        "page": ""
     },
-	"repository": {
-        "type": "git",
-        "url": "http://gitlab.alibaba-inc.com/flight/overwrite"
-    }
+    "type": "kissy-gallery",
+    "type-url": "http://gallery.kissyui.com/guide"
 }
