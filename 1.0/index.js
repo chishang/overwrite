@@ -33,15 +33,20 @@ KISSY.add(function (S, Node,Base) {
             var node = self.get('node');
             node.addClass('overwrite_input');
             node.val('');
+            var id = node.prop('id');
+            if(!id){
+                id = S.guid('overwrite');
+                node.prop(id);
+            }
             var wraper = S.DOM.create('<div class="J_OverwriteWraper overwrite"/>');
             node.wrap(wraper);
             wraper = S.all('.J_OverwriteWraper');
-            var tip = S.DOM.create('<span class="overwrite_tip J_OverwriteTip"/>');
+            var tip = S.DOM.create('<span class="overwrite_tip J_OverwriteTip" for="'+id+'" />');
             wraper.append(tip);
             tip = S.all('.J_OverwriteTip');
             node.css({
                 textIndent:'-99999px'
-            })
+            });
             tip.css({
                 fontSize:node.css('fontSize'),
                 lineHeight:node.css('lineHeight'),
